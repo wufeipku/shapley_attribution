@@ -8,13 +8,12 @@
 
 from collections import Counter
 from itertools import chain, combinations
-import json
 from tqdm import tqdm
 
 
 class SimplifiedShapleyAttributionModel:
     """
-    simplyfied shapley attribution method for ads.
+    simplyfied shapley shapley_attribution_wf method for ads.
     R(S) is used to replace original shapley formular.
     """
     def __init__(self, journeys):
@@ -24,7 +23,7 @@ class SimplifiedShapleyAttributionModel:
     def _phi(self, channel_index):
         """
         :param channel_index: channel number
-        :return: attribution
+        :return: shapley_attribution_wf
         """
         s_channel = [k for k in self.journeys.keys() if channel_index in k]
         score = 0
@@ -46,7 +45,7 @@ class SimplifiedShapleyAttributionModel:
 
 class OrderedShapleyAttributionModel:
     """
-    ordered shapley attribution method
+    ordered shapley shapley_attribution_wf method
     """
     def __init__(self, journeys: list[list]):
         """
@@ -91,7 +90,7 @@ class OrderedShapleyAttributionModel:
 
     def _phi(self, channel_index, touchpoint_index):
         """
-        calculate attribution for one channel and one order
+        calculate shapley_attribution_wf for one channel and one order
         :param channel_index: the select channel number
         :param touchpoint_index: the order number of this channel
         :return:
@@ -111,12 +110,12 @@ class OrderedShapleyAttributionModel:
 
     def attribute(self):
         """
-        calculate all channels's attribution
+        calculate all channels's shapley_attribution_wf
         """
         print("Running Ordered Shapley Attribution Model...")
         print(f"Found {len(self.channels)} unique channels!")
         print(f"Found {self.N} maximum touchpoints!")
-        print(f"Proceeding to attribution computation...")
+        print(f"Proceeding to shapley_attribution_wf computation...")
         print()
         return {j: [self._phi(j, i) for i in range(1, self.N + 1)] for j in self.channels}
 

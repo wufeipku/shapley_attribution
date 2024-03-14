@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: shapley_attribution_wf
+Version: 0.0.12
+Summary: package for shapley shapley_attribution_wf
+Home-page: https://github.com/wufeipku/shapley_attribution.git
+Author: wufeipku
+Author-email: wufei.pku@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm>=4.66.2
+Requires-Dist: numpy>=1.26.4
+
+This is a method based on project: https://github.com/ianchute/shapley-attribution-model-zhao-naive.
+
+The main difference is put in a shapley attribution for fixed formular.
+
+The three method are:
+
+shapley_attribution_formula.ShapleyAttributionModelFormula
+shapley_attribution_ads.OrderedShapleyAttributionModel
+shapley_attribution_ads.SimplifiedShapleyAttributionModel
+
+You can just import and instantiate it.

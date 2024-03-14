@@ -15,7 +15,7 @@ from tqdm import tqdm
 
 class ShapleyAttributionModelFormula:
     '''
-    shapley attribution for pre-set formulas
+    shapley shapley_attribution_wf for pre-set formulas
     :param data_before: list data for comparent pre-time
     :param data_after: list data for comparent after-time
     '''

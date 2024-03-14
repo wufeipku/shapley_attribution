@@ -5,7 +5,7 @@
 # @AUthor: Fei Wu
 # @Time: 3月, 13, 2024
 import json
-from attribution.shapley_attribution_ads import SimplifiedShapleyAttributionModel
+from shapley_attribution_wf.shapley_attribution_ads import SimplifiedShapleyAttributionModel
 
 
 with open("../data/sample.json", "r") as f:

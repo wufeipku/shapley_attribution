@@ -7,7 +7,7 @@
 
 
 import pandas as pd
-from attribution.shapley_attribution_formula import ShapleyAttributionModelFormula
+from shapley_attribution_wf.shapley_attribution_formula import ShapleyAttributionModelFormula
 
 
 def func(dau, avg_vv, live_load, cont_load, ad_load, live_ctrcvr, cont_ctrcvr,
